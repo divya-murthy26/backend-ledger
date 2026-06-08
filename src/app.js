@@ -12,6 +12,10 @@ const app = express()
 app.use(express.json())//req body to read the data
 app.use(cookieParser())
 
+
+app.get("/", (req, res) => {
+    res.send("ledger service is running!")
+})
 //use of routes
 app.use("/api/auth", authRouter)
 app.use("/api/account", accountRouter)

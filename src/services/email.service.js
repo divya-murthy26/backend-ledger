@@ -21,7 +21,9 @@ transporter.verify((error, success) => {
   }
 });
 
-
+console.log(process.env.EMAIL_USER);
+console.log(process.env.CLIENT_ID);
+console.log(process.env.REFRESH_TOKEN);
 
 // Function to send email
 const sendEmail = async (to, subject, text, html) => {
